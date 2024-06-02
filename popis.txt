@@ -1,0 +1,1 @@
+Jako téma semestrální práce bych si rád zvolil vytvoření XML formátu pro ukládání inzerátů, které by mohl využívat například inzertní web. 

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://inzeraty.cerm47.cz"
+    xmlns="http://inzeraty.cerm47.cz" elementFormDefault="qualified"
+    xmlns:o="http://inzeraty.cerm47.cz" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+    vc:minVersion="1.1" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+
+    <xs:element name="inzeraty" type="inzeratyType">
+        
+        <!--Zajištění unikátního ID pro inzeráty-->
+        <xs:unique name="uniqueInzeratId">
+            <xs:selector xpath="o:inzerat"/>
+            <xs:field xpath="@id"/>
+        </xs:unique>
+        
+       <!--Referenční integrita mezi seznamen kategorií a kategorií v inzerátu-->
+        <xs:key name="kategorieKey">
+            <xs:selector xpath="o:kategorie"/>
+            <xs:field xpath="o:nazev"/>
+        </xs:key>
+        <xs:keyref name="kategorieRef" refer="kategorieKey">
+            <xs:selector xpath="o:inzerat"/>
+            <xs:field xpath="o:kategorie"/>
+        </xs:keyref>
+        
+    </xs:element>
+
+
+    <xs:complexType name="inzeratyType">
+        <xs:sequence>
+            <xs:element name="kategorie" type="kategorieType" maxOccurs="unbounded"/>
+            <xs:element name="inzerat" type="inzeratType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="kategorieType">
+        <xs:sequence>
+            <xs:element name="nazev" type="nonEmptyString"/>
+            <xs:element name="popis" type="nonEmptyString"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="inzeratType">
+        <xs:sequence>
+            <xs:element name="nadpis" type="nonEmptyString" maxOccurs="1"/>
+            <xs:element name="popis" type="xs:string" maxOccurs="1"/>
+            <xs:choice>
+                <xs:sequence>
+                    <xs:element name="startovaciCena" type="xs:nonNegativeInteger"/>
+                    <xs:element name="aktualniCena" type="xs:nonNegativeInteger"/>
+                </xs:sequence>
+                <xs:element name="cena" type="xs:nonNegativeInteger"/>
+            </xs:choice>
+            <xs:element name="mnozstvi" type="xs:integer"/>
+            <xs:element name="kategorie" type="nonEmptyString"/>
+            <xs:element name="prodavajici" type="prodavajiciType"/>
+            <xs:element name="foto" type="xs:string"/>
+            <xs:element name="datumNahrani" type="xs:date"/>
+            <xs:choice>
+                <xs:element name="datumKonce" type="xs:date"/>
+                <xs:element name="rezervovano" type="xs:boolean"/>
+            </xs:choice>
+            <xs:element name="pocetZobrazeni" type="xs:nonNegativeInteger"/>
+        </xs:sequence>
+        <xs:attribute name="typ" type="typType"/>
+        <xs:attribute name="id" type="xs:integer"/>
+    </xs:complexType>
+
+    <xs:simpleType name="typType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="prodej"/>
+            <xs:enumeration value="aukce"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="prodavajiciType">
+        <xs:sequence>
+            <xs:element name="jmeno" type="nonEmptyString"/>
+            <xs:element name="prijmeni" type="nonEmptyString"/>
+            <xs:element name="telefon" type="cisloType"/>
+            <xs:element name="email" type="emailType"/>
+            <xs:element name="adresa" type="adresaType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="cisloType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:complexType name="adresaType">
+        <xs:sequence>
+            <xs:element name="mesto" type="xs:string"/>
+            <xs:element name="psc" type="pscType"/>
+            <xs:element name="ulice" type="xs:string"/>
+            <xs:element name="cisloPopisne" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="pscType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nonEmptyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+
+<!--keyref na kategorie-->
+    
+    
+</xs:schema>

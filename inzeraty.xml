@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="inzeraty.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<inzeraty xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://inzeraty.cerm47.cz inzeraty.xsd" xmlns="http://inzeraty.cerm47.cz"  
+    >
+    
+    
+    <kategorie>
+        <nazev>Auto/Moto</nazev>
+        <popis>Auta, motocykly, skútry, ...</popis>
+    </kategorie>
+    <kategorie>
+        <nazev>Elektronika</nazev>
+        <popis>Počitače, telefony, notebooky, tablety, spotřebiče, ...</popis>
+    </kategorie>
+    <kategorie>
+        <nazev>Knihy</nazev>
+        <popis>Knihy, časopisy, učebnice, skripta, ...</popis>
+    </kategorie>
+    <kategorie>
+        <nazev>Oblečení</nazev>
+        <popis>Boty, šperky, hodinky, doplňky, ...</popis>
+    </kategorie>
+    <kategorie>
+        <nazev>Nábytek</nazev>
+        <popis>Křesla, gauče, skříně, kuchyně, ...</popis>
+    </kategorie>
+    
+    
+    <inzerat typ="aukce" id="1">
+        <nadpis>MacBook Air M2</nadpis>
+        <popis>Prodám rok starý MacBook Air M2, záruka do 1.12.2024</popis>
+        <startovaciCena>15000</startovaciCena>
+        <aktualniCena>16000</aktualniCena>
+        <mnozstvi>1</mnozstvi>
+        <kategorie>Elektronika</kategorie>
+        <prodavajici>
+            <jmeno>Honza</jmeno>
+            <prijmeni>Hrouda</prijmeni>
+            <telefon>123456789</telefon>
+            <email>honzahrouda@centrum.cz</email>
+            <adresa>
+                <mesto>Praha 5</mesto>
+                <psc>15000</psc>
+                <ulice>Preslova</ulice>
+                <cisloPopisne>123</cisloPopisne>
+            </adresa>
+        </prodavajici>
+        <foto>macbook_m2.jpg</foto>
+        <datumNahrani>2024-03-29</datumNahrani>
+        <datumKonce>2024-04-05</datumKonce>
+        <pocetZobrazeni>120</pocetZobrazeni>
+    </inzerat>
+
+    <inzerat typ="prodej" id="2">
+        <nadpis>BMW E90 320D</nadpis>
+        <popis>Prodám auto BMW E90 320D, najeto 200 000km, bez závad, po rozvodech</popis>
+        <cena>200000</cena>
+        <mnozstvi>1</mnozstvi>
+        <kategorie>Auto/Moto</kategorie>
+        <prodavajici>
+            <jmeno>Radek</jmeno>
+            <prijmeni>Hrádek</prijmeni>
+            <telefon>123345679</telefon>
+            <email>radekhradek@gmail.com</email>
+            <adresa>
+                <mesto>Beroun</mesto>
+                <psc>26601</psc>
+                <ulice>Palouček</ulice>
+                <cisloPopisne>123</cisloPopisne>
+            </adresa>
+        </prodavajici>
+        <foto>e90_320d.jpg</foto>
+        <datumNahrani>2024-04-01</datumNahrani>
+        <rezervovano>false</rezervovano>
+        <pocetZobrazeni>342</pocetZobrazeni>
+    </inzerat>
+
+    <inzerat typ="prodej" id="3">
+        <nadpis>Zaklínač III: Krev elfů</nadpis>
+        <popis>Prodám knihy Zaklínač III: Krev elfů, nové, nepoužité</popis>
+        <cena>500</cena>
+        <mnozstvi>5</mnozstvi>
+        <kategorie>Knihy</kategorie>
+        <prodavajici>
+            <jmeno>Tomáš</jmeno>
+            <prijmeni>Koláč</prijmeni>
+            <telefon>123456789</telefon>
+            <email>tomaskolac@seznam.cz</email>
+            <adresa>
+                <mesto>Plzeň</mesto>
+                <psc>30100</psc>
+                <ulice>Šumavská</ulice>
+                <cisloPopisne>123</cisloPopisne>
+            </adresa>
+        </prodavajici>
+        <foto>zaklinac.jpeg</foto>
+        <datumNahrani>2024-04-02</datumNahrani>
+        <rezervovano>false</rezervovano>
+        <pocetZobrazeni>123</pocetZobrazeni>
+    </inzerat>
+
+    <inzerat typ="prodej" id="4">
+        <nadpis>Boty Nike Air Max</nadpis>
+        <popis>Prodám boty Nike Air Max, velikost 42, nové, nepoužité</popis>
+        <cena>2000</cena>
+        <mnozstvi>1</mnozstvi>
+        <kategorie>Oblečení</kategorie>
+        <prodavajici>
+            <jmeno>Lucie</jmeno>
+            <prijmeni>Nováková</prijmeni>
+            <telefon>123456789</telefon>
+            <email>lucienovakova@gmail.com</email>
+            <adresa>
+                <mesto>Brno</mesto>
+                <psc>60200</psc>
+                <ulice>Šumavská</ulice>
+                <cisloPopisne>123</cisloPopisne>
+            </adresa>
+        </prodavajici>
+        <foto>nike.jpg</foto>
+        <datumNahrani>2024-04-03</datumNahrani>
+        <rezervovano>false</rezervovano>
+        <pocetZobrazeni>234</pocetZobrazeni>
+    </inzerat>
+
+    <inzerat typ="prodej" id="5">
+        <nadpis>Stůl</nadpis>
+        <popis>Prodám stůl, dubový, rozměry 120x80cm, nový</popis>
+        <cena>5000</cena>
+        <mnozstvi>1</mnozstvi>
+        <kategorie>Nábytek</kategorie>
+        <prodavajici>
+            <jmeno>Josef</jmeno>
+            <prijmeni>Novák</prijmeni>
+            <telefon>123456789</telefon>
+            <email>josefnovak@seznam.cz</email>
+            <adresa>
+                <mesto>Olomouc</mesto>
+                <psc>77900</psc>
+                <ulice>Šumavská</ulice>
+                <cisloPopisne>123</cisloPopisne>
+            </adresa>
+        </prodavajici>
+        <foto>stul.jpg</foto>
+        <datumNahrani>2024-04-04</datumNahrani>
+        <rezervovano>false</rezervovano>
+        <pocetZobrazeni>345</pocetZobrazeni>
+    </inzerat>
+
+    <inzerat typ="prodej" id="6">
+        <nadpis>Židle</nadpis>
+        <popis>Prodám židle, 4 kusy, nové, nepoužité</popis>
+        <cena>2000</cena>
+        <mnozstvi>4</mnozstvi>
+        <kategorie>Nábytek</kategorie>
+        <prodavajici>
+            <jmeno>Josef</jmeno>
+            <prijmeni>Novák</prijmeni>
+            <telefon>123456789</telefon>
+            <email>josefnovak@seznam.cz</email>
+            <adresa>
+                <mesto>Olomouc</mesto>
+                <psc>77900</psc>
+                <ulice>Šumavská</ulice>
+                <cisloPopisne>123</cisloPopisne>
+            </adresa>
+        </prodavajici>
+        <foto>zidle.jpg</foto>
+        <datumNahrani>2024-04-05</datumNahrani>
+        <rezervovano>false</rezervovano>
+        <pocetZobrazeni>456</pocetZobrazeni>
+    </inzerat>
+
+    <inzerat typ="prodej" id="7">
+        <nadpis>Škoda Octavia 1.9 TDI</nadpis>
+        <popis>Prodám auto Škoda Octavia 1.9 TDI, najeto 200 000km, bez závad, po rozvodech</popis>
+        <cena>100000</cena>
+        <mnozstvi>1</mnozstvi>
+        <kategorie>Auto/Moto</kategorie>
+        <prodavajici>
+            <jmeno>Tomáš</jmeno>
+            <prijmeni>Koláč</prijmeni>
+            <telefon>123456789</telefon>
+            <email>tomaskolac@seznam.cz</email>
+            <adresa>
+                <mesto>Plzeň</mesto>
+                <psc>30100</psc>
+                <ulice>Šumavská</ulice>
+                <cisloPopisne>123</cisloPopisne>
+            </adresa>
+        </prodavajici>
+        <foto>octavia.jpg</foto>
+        <datumNahrani>2024-04-06</datumNahrani>
+        <rezervovano>true</rezervovano>
+        <pocetZobrazeni>567</pocetZobrazeni>
+    </inzerat>
+
+    <inzerat typ="aukce" id="8">
+        <nadpis>MacBook Pro M1</nadpis>
+        <popis>Prodám rok starý MacBook Pro M1, záruka do 1.12.2024</popis>
+        <startovaciCena>20000</startovaciCena>
+        <aktualniCena>21000</aktualniCena>
+        <mnozstvi>1</mnozstvi>
+        <kategorie>Elektronika</kategorie>
+        <prodavajici>
+            <jmeno>Honza</jmeno>
+            <prijmeni>Hrouda</prijmeni>
+            <telefon>123456789</telefon>
+            <email>honzahrouda@centrum.cz</email>
+            <adresa>
+                <mesto>Praha 5</mesto>
+                <psc>15000</psc>
+                <ulice>Preslova</ulice>
+                <cisloPopisne>123</cisloPopisne>
+            </adresa>
+        </prodavajici>
+        <foto>macbook_pro_m1.jpg</foto>
+        <datumNahrani>2024-03-16</datumNahrani>
+        <datumKonce>2024-04-15</datumKonce>
+        <pocetZobrazeni>678</pocetZobrazeni>
+    </inzerat>
+    
+</inzeraty>
