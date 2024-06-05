@@ -72,7 +72,7 @@
         </prodavajici>
         <foto>e90_320d.jpg</foto>
         <datumNahrani>2024-04-01</datumNahrani>
-        <rezervovano>false</rezervovano>
+        <rezervovano>true</rezervovano>
         <pocetZobrazeni>342</pocetZobrazeni>
     </inzerat>
 
