@@ -18,13 +18,14 @@
         <popis>Knihy, časopisy, učebnice, skripta, ...</popis>
     </kategorie>
     <kategorie>
-        <nazev>Oblečení</nazev>
-        <popis>Boty, šperky, hodinky, doplňky, ...</popis>
-    </kategorie>
-    <kategorie>
         <nazev>Nábytek</nazev>
         <popis>Křesla, gauče, skříně, kuchyně, ...</popis>
     </kategorie>
+    <kategorie>
+        <nazev>Oblečení</nazev>
+        <popis>Boty, šperky, hodinky, doplňky, ...</popis>
+    </kategorie>
+   
     
     
     <inzerat typ="aukce" id="1">

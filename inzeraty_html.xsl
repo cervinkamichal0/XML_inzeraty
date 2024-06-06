@@ -80,10 +80,14 @@
                                 <th colspan="2">Detaily</th>
                             </tr>
                  
-
+                            <tr>
+                                <td><b>Typ</b></td>
+                                <td><xsl:value-of select="@typ"/></td>
+                            </tr>
                                 <xsl:choose>
                                     
                                     <xsl:when test="@typ = 'aukce'">
+                                        
                                         <tr>
                                             <td>
                                             <b>Startovací cena</b>
@@ -198,7 +202,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <b>Email</b>
+                                    <b>E-mail</b>
                                 </td>
                                 <td>
                                     <xsl:value-of select="prodavajici/email"/>
