@@ -94,9 +94,9 @@
 
                         <fo:table-header>
                             <fo:table-row>
-                                <fo:table-cell number-columns-spanned="2" padding="2mm"
-                                    border="solid 3px black">
-                                    <fo:block text-align="center" font-weight="bold"
+                                <fo:table-cell number-columns-spanned="2" margin="2mm"
+                                    border="solid 3px black" background-color="#4CAF50">
+                                    <fo:block text-align="center" font-weight="bold" 
                                         >Detaily</fo:block>
                                 </fo:table-cell>
                             </fo:table-row>
@@ -212,11 +212,14 @@
 
                         </fo:table-body>
                     </fo:table>
+                    
+                    
+                    
                     <fo:table>
                         <fo:table-header>
                             <fo:table-row>
-                                <fo:table-cell number-columns-spanned="2" padding="2mm"
-                                    border="solid 3px black">
+                                <fo:table-cell number-columns-spanned="2" margin="2mm"
+                                    border="solid 3px black" background-color="#6897bb">
                                     <fo:block text-align="center" font-weight="bold"
                                         >Prodejce</fo:block>
                                 </fo:table-cell>
