@@ -33,9 +33,10 @@
                 </fo:static-content>
 
                 <fo:flow flow-name="xsl-region-body">
-                    <fo:block font-size="30pt" margin-bottom="30pt" font-weight="bold" text-align="center" margin-top="20px"> Seznam
-                        inzerátů </fo:block>
-                    <fo:block font-size="25pt" margin-bottom="5mm" font-weight="bold">Obsah</fo:block>
+                    <fo:block font-size="30pt" margin-bottom="30pt" font-weight="bold"
+                        text-align="center" margin-top="20px"> Seznam inzerátů </fo:block>
+                    <fo:block font-size="25pt" margin-bottom="5mm" font-weight="bold"
+                        >Obsah</fo:block>
                     <xsl:apply-templates select="/inzeraty/kategorie"/>
                     <xsl:apply-templates select="/inzeraty"/>
                 </fo:flow>
@@ -47,8 +48,7 @@
     <!-- Obsah -->
     <xsl:template match="kategorie">
 
-        <fo:block font-size="12pt" font-weight="bold" text-align="justify"
-            text-align-last="justify">
+        <fo:block font-size="12pt" font-weight="bold" text-align="justify" text-align-last="justify">
             <fo:basic-link internal-destination="{nazev}">
                 <xsl:value-of select="nazev"/>
                 <fo:leader leader-pattern="dots"/>
@@ -65,13 +65,14 @@
 
     <!-- Inzeráty -->
     <xsl:template match="inzeraty">
-        
+
         <xsl:for-each-group select="inzerat" group-by="kategorie">
             <xsl:sort select="kategorie" order="ascending"/>
             <fo:block text-align="center" font-weight="bold" font-size="30"
-                page-break-before="always" id="{kategorie}"> Kategorie: <xsl:value-of select="kategorie"/>
-            </fo:block >
-            
+                page-break-before="always" id="{kategorie}"> Kategorie: <xsl:value-of
+                    select="kategorie"/>
+            </fo:block>
+
             <xsl:for-each select="current-group()">
                 <!--Nadpis-->
                 <fo:block font-size="20" font-weight="bold" space-before="10mm">
@@ -96,7 +97,7 @@
                             <fo:table-row>
                                 <fo:table-cell number-columns-spanned="2" margin="2mm"
                                     border="solid 3px black" background-color="#4CAF50">
-                                    <fo:block text-align="center" font-weight="bold" 
+                                    <fo:block text-align="center" font-weight="bold"
                                         >Detaily</fo:block>
                                 </fo:table-cell>
                             </fo:table-row>
@@ -212,9 +213,9 @@
 
                         </fo:table-body>
                     </fo:table>
-                    
-                    
-                    
+
+
+
                     <fo:table>
                         <fo:table-header>
                             <fo:table-row>

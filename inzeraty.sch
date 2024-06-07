@@ -11,15 +11,17 @@
     </sch:pattern>
     
     <sch:pattern>
-        <sch:title>Kontrola datumu</sch:title>
+        <sch:title>Datum nahrani nesmi byt v budoucnosti</sch:title>
+        <sch:rule context="o:inzeraty/o:inzerat">
+            <sch:assert test="o:datumNahrani &lt;= xs:date(current-date())">datumNahrani nesmí být v budoucnosti</sch:assert>
+        </sch:rule>
+    </sch:pattern>
+    
+    <sch:pattern>
+        <sch:title>Kontrola data nahrani a konce</sch:title>
         <sch:rule context="o:inzeraty/o:inzerat[o:datumKonce]">
             <sch:assert test="o:datumNahrani &lt;= o:datumKonce">datumNahrani nemuze byt pozdeji, nez datumKonce.</sch:assert>
         </sch:rule>   
     </sch:pattern>
-    
-    <sch:pattern>
-        <sch:rule context="o:inzeraty/o:inzerat">
-            <sch:assert test="o:nadpis">U inzerátu musí být vyplněný nadpis</sch:assert>
-        </sch:rule>
-    </sch:pattern>
+   
 </sch:schema>
